@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Vương Minh Anh Portfolio</title>
+    <title>Minh Anh's Dreamy Digital Portfolio 🌸</title>
     
     <!-- Google Fonts hỗ trợ tiếng Việt hoàn hảo không lỗi dấu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -915,7 +915,10 @@
         <!-- Intro Profile section -->
         <section class="intro-section glass-panel">
             <div class="avatar-box">
-                <span class="avatar-decor decor-korea">🇰🇷</span>
+                <!-- Icon cờ Hàn Quốc dạng hình tròn sắc nét hiển thị chuẩn trên mọi hệ điều hành -->
+                <div class="avatar-decor decor-korea" style="top: 0; left: 10px;">
+                    <img src="https://flagcdn.com/kr.svg" alt="South Korea Flag" style="width: 45px; height: 45px; border-radius: 50%; object-fit: cover; border: 2px solid white; box-shadow: var(--shadow-soft);">
+                </div>
                 <div class="avatar-frame">
                     <img src="Hình 1.jpg" alt="Nguyễn Vương Minh Anh" class="avatar-img">
                 </div>
@@ -924,12 +927,12 @@
             
             <div class="intro-info">
                 <div class="student-tag">🌸 DIGITAL PORTFOLIO</div>
-                <h1 class="intro-title"><span>Nguyễn Vương Minh Anh</span>
+                <h1 class="intro-title"><span>Nguyễn Vương Minh Anh</span></h1>
                 
                 <div class="student-details">
                     <div class="detail-item">
                         <i class="fa-solid fa-user-graduate"></i>
-                        <span>Nguyễn Vương Minh Anh (25042343)</span>
+                        <span>Họ và tên: Nguyễn Vương Minh Anh (25042343)</span>
                     </div>
                     <div class="detail-item">
                         <i class="fa-solid fa-school"></i>
@@ -1377,7 +1380,7 @@
 
         /* --- DECOR FLOATING SYSTEM --- */
         const decorContainer = document.getElementById('floating-decor');
-        const symbols = ['🌸', '✨', '🇰🇷', '☁️', '🎈'];
+        const symbols = ['🌸', '✨', '☁️', '🎈'];
         for (let i = 0; i < 20; i++) {
             const el = document.createElement('div');
             el.classList.add('floating-item');
