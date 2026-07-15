@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nguyễn Vương Minh Anh Portfolio</title>
+    <title>Minh Anh's Dreamy Digital Portfolio 🌸</title>
     
     <!-- Google Fonts hỗ trợ tiếng Việt hoàn hảo không lỗi dấu -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -714,47 +714,6 @@
             box-shadow: 0 4px 10px rgba(255, 143, 163, 0.2);
         }
 
-        /* Widget 5: Infographic Layer Explorer */
-        .layer-explorer {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 30px;
-            background: white;
-            padding: 25px;
-            border-radius: 20px;
-            border: 1px solid var(--light-pink);
-        }
-
-        .layers-stack {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .layer-item {
-            padding: 15px 20px;
-            border: 2px solid var(--light-pink);
-            border-radius: 12px;
-            cursor: none;
-            transition: var(--transition-smooth);
-        }
-
-        .layer-item.active {
-            border-color: var(--dark-pink);
-            background: var(--light-pink);
-        }
-
-        .layer-preview-pane {
-            border: 1px solid var(--light-pink);
-            border-radius: 12px;
-            background: #faf8f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 15px;
-            height: 320px;
-        }
-
         /* Widget 6: Responsibility Survey Checklist */
         .survey-container {
             background: white;
@@ -868,11 +827,11 @@
                 grid-template-columns: 1fr;
             }
 
-            .meta-grid, .prompt-panel, .file-explorer-widget, .layer-explorer {
+            .meta-grid, .prompt-panel, .file-explorer-widget {
                 grid-template-columns: 1fr;
             }
 
-            .file-explorer-widget, .layer-preview-pane {
+            .file-explorer-widget {
                 height: auto;
             }
 
@@ -968,7 +927,7 @@
                 <div class="goal-card">
                     <i class="fa-solid fa-globe"></i>
                     <h3>Bổ trợ chuyên ngành Hàn</h3>
-                    <p>Ứng dụng triệt để AI dịch thuật, công cụ cộng tác trực tuyến để tối ưu hóa việc nghiên cứu ngôn ngữ, biên kịch và xây dựng nội dung văn hóa Hàn Quốc.</p>
+                    <p>Ứng dụng triệt độ AI dịch thuật, công cụ cộng tác trực tuyến để tối ưu hóa việc nghiên cứu ngôn ngữ, biên kịch và xây dựng nội dung văn hóa Hàn Quốc.</p>
                 </div>
                 <div class="goal-card">
                     <i class="fa-solid fa-shield-heart"></i>
@@ -1191,27 +1150,23 @@
                     </div>
                 </div>
 
-                <h4 class="widget-title"><i class="fa-solid fa-layer-group"></i> Quy trình lắp ráp Infographic theo từng lớp:</h4>
-                <div class="layer-explorer">
-                    <div class="layers-stack" id="stack-container">
-                        <!-- Dynamic layer list -->
-                    </div>
-                    <div class="layer-preview-pane">
-                        <div id="layer-preview-box" style="text-align: center; width:100%;">
-                            <!-- Dynamic preview content -->
-                        </div>
-                    </div>
+                <!-- Thay thế phần mô phỏng phân lớp bằng chèn hình ảnh infographic infor.png full size -->
+                <h4 class="widget-title"><i class="fa-solid fa-file-image"></i> Sản phẩm Infographic hoàn chỉnh:</h4>
+                <div style="text-align: center; margin-top: 20px;">
+                    <img src="infor.png" alt="Infographic Lợi ích của việc đọc sách" style="max-width: 100%; height: auto; max-height: 850px; border-radius: 16px; box-shadow: var(--shadow-soft); border: 2px solid white; object-fit: contain;">
                 </div>
             </section>
 
             <!-- Bài 6 -->
             <section class="exercise-detail-box glass-panel">
                 <div class="ex-header">
-                    <div class="ex-title-group">
-                        <div class="ex-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div>
-                            <span class="ex-tag">Bài tập 6</span>
-                            <h3>Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h3>
+                    <div class="ex-header">
+                        <div class="ex-title-group">
+                            <div class="ex-icon-wrapper"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div>
+                                <span class="ex-tag">Bài tập 6</span>
+                                <h3>Sử dụng AI có trách nhiệm trong học tập và nghiên cứu</h3>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1364,7 +1319,7 @@
         }
 
         // Hover enlarges custom cursor
-        const interactiveElements = document.querySelectorAll('a, button, input, .kanban-card, .step-nav-btn, .layer-item');
+        const interactiveElements = document.querySelectorAll('a, button, input, .kanban-card, .step-nav-btn');
         interactiveElements.forEach(el => {
             el.addEventListener('mouseenter', () => {
                 cursor.style.width = '45px';
@@ -1615,40 +1570,6 @@
             updatePromptLab();
         }
         buildLabWidget();
-
-        /* --- BÀI 5: INFOGRAPHIC LAYER EXPLORER --- */
-        const layersData = [
-            { id: 1, title: "Lớp 1: Khởi tạo Nội dung (ChatGPT)", desc: "Nhập prompt hướng dẫn chi tiết để ChatGPT lên sườn nội dung 5 lợi ích đọc sách. Minh Anh sau đó đã tự tay sửa lại văn phong ngọt ngào, truyền cảm hứng tự học ngôn ngữ.", preview: "<div style='text-align:left; font-size:0.85rem;'><b>5 LỢI ÍCH ĐỌC SÁCH:</b><br>1. Mở rộng thế giới quan kiến thức.<br>2. Mài sắc tư duy logic, phản biện.<br>3. Làm giàu vốn từ vựng (rất tốt khi học tiếng Hàn).<br>4. Thư thái tâm hồn, xoa dịu stress.<br>5. Nuôi dưỡng lòng trắc ẩn, đồng cảm.</div>" },
-            { id: 2, title: "Lớp 2: Vẽ minh họa (Dreamina AI)", desc: "Sử dụng prompt mô tả màu sắc mộng mơ để Dreamina AI vẽ bức ảnh nghệ thuật cô gái bước lên nấc thang sách hướng tới chiếc cúp tri thức danh giá.", preview: "<div style='text-align:center;'><i class='fa-solid fa-wand-magic-sparkles' style='font-size:3rem; color:var(--dark-pink);'></i><p style='font-weight:700; margin-top:10px;'>Dreamina AI vẽ thành công bức ảnh pastel mộng mơ cực xinh!</p></div>" },
-            { id: 3, title: "Lớp 3: Layout & Xuất bản (Canva AI)", desc: "Tích hợp toàn bộ nội dung chữ, ảnh cô gái đi lên nấc thang, cùng các biểu tượng đôi bàn tay nâng trái tim, bộ não vui nhộn để tạo nên một infographic hoàn chỉnh, chuyên nghiệp.", preview: "<div style='text-align:center;'><i class='fa-solid fa-file-image' style='font-size:4rem; color:var(--purple-accent);'></i><p style='font-weight:700; margin-top:10px;'>Infographic hoàn chỉnh mộng mơ đã được xuất bản!</p></div>" }
-        ];
-
-        const stackContainer = document.getElementById('stack-container');
-        const layerPreviewBox = document.getElementById('layer-preview-box');
-
-        function loadLayer(id) {
-            document.querySelectorAll('.layer-item').forEach((item, i) => {
-                if(layersData[i].id === id) item.classList.add('active');
-                else item.classList.remove('active');
-            });
-            const layer = layersData.find(l => l.id === id);
-            layerPreviewBox.innerHTML = `
-                <h5 style='margin-bottom:10px; color:var(--dark-pink);'>Bản xem trước quy trình:</h5>
-                <div style='background:white; padding:15px; border-radius:10px; border:1px solid var(--light-pink); margin-bottom:15px;'>
-                    ${layer.preview}
-                </div>
-                <p style='font-size:0.85rem; line-height:1.6; color:var(--text-muted);'>${layer.desc}</p>
-            `;
-        }
-
-        layersData.forEach((layer) => {
-            const div = document.createElement('div');
-            div.classList.add('layer-item');
-            div.innerText = layer.title;
-            div.onclick = () => loadLayer(layer.id);
-            stackContainer.appendChild(div);
-        });
-        loadLayer(1);
 
         /* --- BÀI 6: RESPONSIBILITY SURVEY CHECKLIST --- */
         function calcResponsibilityScore() {
